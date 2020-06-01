@@ -30,7 +30,7 @@ function get_items($db){
   return fetch_all_query($db, $sql);
 }
 
-function insert_items($db,$newname, $newprice, $new_img_filename, $status, $stock, $type_sharp, $type_acidity, $type_bitterness, $type_sweetness, $type_tasty, $appetizers, $area, $comment, $featured, $create_datetime, $update_datetime){
+function insert_items($db,$newname, $newprice, $status, $stock, $type_sharp, $type_acidity, $type_bitterness, $type_sweetness, $type_tasty, $appetizers, $area, $comment, $featured, $create_datetime, $update_datetime){
     
     if($newname === '') {
         set_message('登録できませんでした。もう一度やり直してください。');
