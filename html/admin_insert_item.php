@@ -48,7 +48,7 @@ $comment = preg_replace('/^[ 　]+/u', '', $comment);
 
 $img_dir = '../html/assets/img/'; 
 
-if(insert_items($db,$newname, $newprice, $status, $stock, $type_sharp, $type_acidity, $type_bitterness, $type_sweetness, $type_tasty, $appetizers, $area, $comment, $featured, $create_datetime, $update_datetime)) {
+if(insert_items($db, $newname, $newprice, $status, $stock, $type_sharp, $type_acidity, $type_bitterness, $type_sweetness, $type_tasty, $appetizers, $area, $comment, $featured, $create_datetime, $update_datetime)) {
     set_message('商品の追加が完了しました！');
 }
 
