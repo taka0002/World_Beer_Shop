@@ -1,6 +1,4 @@
-<!--user.php-->
 <?php
-$msg = [];
 require_once '../model/functions.php';
 require_once '../model/db.php';
 
