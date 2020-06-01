@@ -4,13 +4,6 @@
 require_once MODEL_PATH . 'functions.php';
 require_once MODEL_PATH . 'db.php';
 
-//画像関連
-$img_dir = './img/';    // アップロードした画像ファイルの保存ディレクトリ
-$data = array();
-$new_img_filename = '';   // アップロードした新しい画像ファイル名
-$msg = [];
-$user_id = 0;
-
 function get_items($db){
   $sql = '
     SELECT
@@ -37,7 +30,7 @@ function get_items($db){
   return fetch_all_query($db, $sql);
 }
 
-function insert_items($db,$newname, $newprice, $new_img_filename, $status, $stock, $type_sharp, $type_acidity, $type_bitterness, $type_sweetness, $type_tasty, $appetizers, $area, $comment, $featured, $create_datetime, $update_datetime){
+function insert_items($db,$newname, $newprice, $status, $stock, $type_sharp, $type_acidity, $type_bitterness, $type_sweetness, $type_tasty, $appetizers, $area, $comment, $featured, $create_datetime, $update_datetime){
     
     if($newname === '') {
         set_message('登録できませんでした。もう一度やり直してください。');

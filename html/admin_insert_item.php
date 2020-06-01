@@ -11,10 +11,6 @@ $create_datetime = date('Y/m/d H:i:s');
 $update_datetime = date('Y/m/d H:i:s');
 
 $db = get_db_connect();
-
-//画像関連
-$img_dir = '../html/assets/img/';    // アップロードした画像ファイルの保存ディレクトリ
-$new_img_filename = '';   // アップロードした新しい画像ファイル名
             
 $newname = get_post('newname');
 
@@ -52,7 +48,7 @@ $comment = preg_replace('/^[ 　]+/u', '', $comment);
 
 $img_dir = '../html/assets/img/'; 
 
-if(insert_items($db,$newname, $newprice, $new_img_filename, $status, $stock, $type_sharp, $type_acidity, $type_bitterness, $type_sweetness, $type_tasty, $appetizers, $area, $comment, $featured, $create_datetime, $update_datetime)) {
+if(insert_items($db,$newname, $newprice, $status, $stock, $type_sharp, $type_acidity, $type_bitterness, $type_sweetness, $type_tasty, $appetizers, $area, $comment, $featured, $create_datetime, $update_datetime)) {
     set_message('商品の追加が完了しました！');
 }
 
