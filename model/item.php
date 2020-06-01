@@ -4,13 +4,6 @@
 require_once MODEL_PATH . 'functions.php';
 require_once MODEL_PATH . 'db.php';
 
-//画像関連
-$img_dir = './img/';    // アップロードした画像ファイルの保存ディレクトリ
-$data = array();
-$new_img_filename = '';   // アップロードした新しい画像ファイル名
-$msg = [];
-$user_id = 0;
-
 function get_items($db){
   $sql = '
     SELECT
