@@ -1,0 +1,26 @@
+table {
+  border-collapse: collapse;
+}
+table, tr, th, td {
+  border: solid 1px;
+  padding: 10px;
+  text-align: center;
+}
+td.img {
+    width:300px;
+}
+img {
+    width: 125px;
+    height: 125px;
+}
+h1, form {
+    border-bottom:2px solid;
+    padding-bottom:30px;
+}
+td>form {
+    border-bottom:none;
+    padding-bottom:0;
+}
+tr.false {
+    background-color: #A9A9A9;
+}
