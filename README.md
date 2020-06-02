@@ -1,6 +1,9 @@
 # World_beershop
 オリジナルECサイトです。
 
+【使用言語など】
+HTML/CSS、jQuery、PHP、MySQL、GitHub、Docker
+
 【工夫した点】
 
 ・トップページにて、注目アイテムをスクロールで表示している。
