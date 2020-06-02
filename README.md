@@ -2,7 +2,7 @@
 オリジナルECサイトです。
 
 【使用言語など】
-HTML/CSS、jQuery、PHP、MySQL、GitHub、Docker
+HTML/CSS、JavaScript,jQuery、PHP、MySQL、GitHub、Docker
 
 【工夫した点】
 
