@@ -1,0 +1,480 @@
+
+@media screen and (max-width:960px) {
+    
+.amount {
+    display:none;
+}
+
+.done {
+    width:100%;
+    font-size:20px;
+}
+
+.finish_message {
+    width:100%;
+}
+
+
+}
+
+/*画面幅が480pxまでの時*/
+@media screen and (max-width:480px){
+    
+input.button {
+    height: 45px;
+}
+
+.content {
+    width: 100%;
+}
+    
+select {
+    padding: 0 35px 0 5px;
+}
+    
+.area_text h2 {
+    font-size: 32px;
+}
+    
+.area_text p {
+    font-size: 20px;
+}
+    
+.area_header ul {
+    margin: 0;
+    flex: 1;
+    padding-left: 0px;
+    display:block;
+}
+
+.area_header li {
+    border-left: 1px dotted #FFFFFF;
+    display:block;
+    border-bottom:1px solid #ffffff;
+}
+
+.area_header li:last-child {
+    border-bottom: none;
+}
+
+.area_header li a {
+    text-align: left;
+    padding-left: 20px;
+    font-size: 24px;
+    display: block;
+}
+    
+.top_header_box {
+    margin: 0 auto;
+    width: 100%;
+    display: block;
+}
+.top_header_box {
+    margin: 0 auto;
+}
+
+.top_header {
+    display: block;
+}
+
+.top_header div {
+    border-bottom: 1px solid #ffffff;
+    border-top: 1px solid #ffffff;
+}
+.top_header .name {
+    margin:0 auto;
+    display: inherit;
+    font-size: 24px;
+    width: 100%;
+    text-align: center;
+}
+
+.logout {
+    font-size: 24px;
+}
+
+.nav_bar {
+    padding: 0;
+}
+
+.buy_history {
+    text-align: center;
+    font-size: 24px;
+    border-bottom: 1px solid #000000;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.find {
+    background-color: #87cefa;
+    width: 350px;
+    font-size: 28px;
+    padding: 0;
+    color: #ffffff;
+    height: 42px;
+    margin: 0 0 10px;
+    width: 100%;
+}
+
+.sort {
+    width: 100%;
+    margin: 30px 0;
+}
+
+.sort form input.rearranges {
+    padding: 0px;
+    width: 310px;
+    margin: 0px;
+    font-size: 28px;
+    height: 45px;
+}
+
+.cart-btn {
+    font-size: 24px;
+    height: 40px;
+}
+
+.buy_history a {
+    display: block;
+}
+
+.drink span {
+    font-size: 20px;
+}
+
+.drink span.price {
+    font-size: 28px;
+}
+
+a.cart {
+    border-left: none;
+    border-right: none;
+    text-align: center;
+    display: block;
+    border-bottom: 1px solid #ffffff;
+    background: #ffa500;
+}
+
+.area_top {
+    font-size: 16px;
+}
+
+.logout_header a {
+    margin:0 auto;
+}
+.nav_bar ul {
+    width: 100%;
+    text-align: left;
+}
+
+.nav_bar {
+    text-align: left;
+}
+
+.nav_bar ul li:last-child {
+    width: 100%;
+}
+
+.nav_bar span {
+    padding: 10px;
+    display: block;
+    font-size: 20px;
+}
+.nav_bar form select {
+    font-size: 20px;
+}
+
+input {
+    width: 240px;
+}
+img, .slider {
+    height: 200px;
+}
+.item .item_img {
+    width:200px;
+    height:200px;
+}
+.item {
+    display: inline-block;
+    margin-top: 0;
+}
+
+.europe, .asia, .america, .japan {
+    display: block;
+    text-align: center;
+}
+
+.area_img {
+    width: 250px;
+    height: 150px;
+}
+
+.america .area_img, .japan .area_img {
+    padding-right:0;
+}
+
+.europe .area_img, .asia .area_img {
+    padding-left: 0;
+}
+
+.area_text {
+    text-align:left;
+}
+
+#flex .drink {
+    text-align: center;
+    margin: 10px;
+}
+
+#flex .drink {
+    text-align: center;
+    margin: 10px;
+    display: inline-block;
+}
+
+.description_europe, .description_america, .description_asia, .description_japan {
+    font-size: 16px;
+}
+
+.description_europe, .description_america, .description_asia, .description_japan {
+    margin: 20px auto;
+    font-size: 20px;
+}
+
+#flex {
+    width: 100%;
+}
+
+.sort form {
+    text-align: center;
+}
+
+.sort form select {
+    font-size: 24px;
+    height: 50px;
+    width: 176px;
+    padding: 6px;
+    border-radius: 0.5em;
+    margin-bottom: 15px;
+}
+
+.sort form select option {
+    text-align:center;
+}
+
+.sort form input {
+    width: auto;
+}
+
+.popup_content {
+    width: 100%;
+}
+
+.popup_content {
+    border-radius: 40px;
+}
+
+.cart_content {
+    width: 100%;
+    text-align: center;
+}
+
+.cart_table img.img {
+    width: 250px;
+    text-align: center;
+}
+
+.cart_table img {
+    height: 200px;
+}
+
+.cart_table {
+    display: block;
+}
+
+.cart_table span,
+.cart_table form,
+.cart_table img {
+    font-size:24px;
+}
+
+input {
+    font-size: 20px;
+    width: 300px;
+    margin-bottom: 15px;
+    height: 30px;
+}
+
+.select input {
+    height: 20px;
+    padding-right: 40px;
+}
+
+fieldset {
+    padding: 0;
+    font-size: 20px;
+}
+
+.well {
+    font-size: 16px;
+    text-align: left;
+}
+
+#name1, #name2, #kana1, #kana2 {
+    font-size: 16px;
+}
+
+#zipcode,
+#addr1,
+#addr2,
+#tel,
+#email {
+    font-size: 16px;
+}
+
+.select {
+    text-align:left;
+    font-size: 20px;
+}
+
+.done {
+    width:100%;
+    font-size:20px;
+}
+
+.finish_message {
+    width:98%;
+    font-size: 20px;
+}
+
+.finish_message h3 {
+    font-size:24px;
+}
+
+.close {
+    width: 300px;
+    margin-top: 0;
+}
+
+.item .popup .popup_content .item_img {
+    height: 120px;
+    width: 120px;
+    margin-bottom: 20px;
+}
+
+.popup_content img {
+    height: 120px;
+    width: 120px;
+}
+
+.item_img {
+    height: 250px;
+    width: 250px;
+}
+
+#flex .drink {
+    width: 100%;
+    margin:0;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+#login {
+    margin-top: 100px;
+}
+
+.complete_buton {
+    width:300px;
+    font-size: 16px;
+}
+
+.complete_text {
+    font-size: 16px;
+}
+
+.success-msg {
+    font-size: 22px;
+}
+
+.cart_table.history img.img {
+    width: 200px;
+    height: 200px;
+}
+
+.cart_table.history span,
+.cart_table.history p {
+    font-size: 20px;
+}
+
+.cart_title {
+    font-size: 28px;
+}
+
+.border_responsive {
+    background: #ffffff;
+    border:1px solid #000000;
+    width: 100%;
+}
+
+.cart_table input {
+    width: 80px;
+    font-size: 20px;
+}
+
+.buy-sum-title {
+    font-size: 24px;
+}
+
+.buy-sum-price {
+    font-size: 28px;
+}
+
+input.buy-btn {
+    font-size: 24px;
+    height: 40px;
+}
+
+.required {
+    font-size: 24px;
+}
+
+.form-group {
+    margin:5px 0;
+}
+
+#flex p {
+    font-size: 20px;
+}
+
+#flex p span {
+    display: none;
+}
+
+.scroll {
+    height: 200px;
+}
+
+#flex_featured {
+    display: none;
+}
+
+.europe,
+.asia,
+.america,
+.japan {
+    margin:30px 0;
+}
+
+.europe {
+    margin:15px 0;
+}
+
+.err_msg {
+    width: 100%;
+}
+
+.nav_bar ul li {
+    font-size: 20px;
+}
+
+}

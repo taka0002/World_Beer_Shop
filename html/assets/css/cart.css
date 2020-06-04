@@ -1,0 +1,188 @@
+/*cart.php*/
+.cart_content {
+    width:960px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cart_title {
+    font-weight:normal;
+    text-align:center;
+    background-color:#dcdcdc;
+    font-size: 24px;
+}
+
+.cart_table {
+    margin:0 auto;
+    display:flex;
+    border-top: 2px solid #dcdcdc;
+    padding:15px 0;
+}
+
+.cart_table span {
+    font-size:24px;
+}
+
+.cart_table:last-child {
+    border-bottom: 2px solid #dcdcdc;
+}
+
+.cart_table div {
+    flex:1;
+    text-align: center;
+}
+
+.cart_table span,
+.cart_table form,
+.cart_table img {
+    flex:1;
+    text-align:center;
+}
+
+.cart_table div span {
+    width:100%;
+}
+
+.cart_table div span,
+.cart_table div form {
+    margin:10px;
+}
+
+.cart_table img {
+    width:150px;
+    height:150px;
+}
+
+.cart_table input {
+    width:50px;
+}
+
+.purchase input {
+    width:400px;
+    margin-top: 30px;
+}
+
+input.buy-btn {
+    width:100%;
+    margin:10px 0 20px;
+    background-color: #ff7f50;
+    color:#ffffff;
+    font-size:24px;
+}
+
+input.buy-btn:hover {
+    opacity:0.6;
+    transition:0.6s;
+}
+
+.buy-sum-box {
+    text-align:center;
+    padding:20px 0 10px;
+    border-top: 2px solid #dcdcdc;
+}
+
+.buy-sum-title {
+    font-size:24px;
+}
+
+.buy-sum-price {
+    font-size:32px;
+    color:#ff0000;
+}
+
+.cart_name {
+    padding-left:10px;
+}
+
+/*cart_pay.php*/
+.form-horizontal input {
+    font-size:16px;
+}
+.cart_content h2 {
+    text-align:center;
+    font-weight:normal;
+}
+.well {
+    margin:0 auto 10px;
+    font-size:20px;
+}
+.well p {
+    margin:0;
+}
+.well input {
+    width:360px;
+}
+.required {
+    color:#ff0000;
+    text-align:center;
+    font-size:16px;
+}
+.input-group input {
+    width:120px;
+}
+.grid {
+    width:60%;
+    margin:0 auto 20px;
+}
+.form__field {
+    margin:10px 0;
+}
+.form-group input {
+    font-size:20px;
+}
+.align__item {
+    width:60%;
+    margin:0 auto 20px;
+    border:1px solid #000000;
+}
+#tel {
+    width:160px;
+}
+
+#name1, #name2, #kana1, #kana2 {
+     width:180px;
+}
+
+#zipcode {
+    width:100px;
+}
+
+.select {
+    margin:0 auto 10px;
+    border:1px solid #000000;
+    font-size:20px;
+}
+.select div {
+    margin:10px 0 10px 12px;
+}
+.select input {
+    width:20px;
+}
+
+/*confirm.php*/
+.return {
+    text-align:center;
+}
+.return input.buy-btn {
+    width:100%;
+    background-color: #dcdcdc;
+    color:#000000;
+    font-size:24px;
+    margin: 0 0 20px 0;
+}
+
+.return input.buy-btn:hover {
+    opacity:0.5;
+    transition:0.6s;
+}
+.err_msg {
+    width:960px;
+    margin:0 auto;
+}
+.err_msg ul {
+    list-style:none;
+    font-size:20px;
+    padding-left:0px;
+}
+
+

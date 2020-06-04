@@ -1,0 +1,29 @@
+.done {
+    width: 960px;
+    background-color: #ff7f50;
+    margin:20px auto;
+    color:#ffffff;
+    font-size:24px;
+    text-align:center;
+    list-style:none;
+}
+.finish_message {
+    width:960px;
+    margin:0 auto 20px;
+    border:2px solid #dcdcdc;
+}
+.finish_message h3 {
+    text-align:center;
+    background:#ff7f50;
+    margin-top:0;
+    color:#FFFFFF;
+    font-size:24px;
+    font-weight:normal;
+}
+.finish_message p {
+    padding-left:10px;
+}
+.cart_table img.img {
+    width:150px;
+    text-align:center;
+}

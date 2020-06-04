@@ -3,13 +3,16 @@
     <head>
         <title>購入手続きページ</title>
         <?php include VIEW_PATH . 'templates/head.php'; ?>
-        <link rel="stylesheet" href="../html/assets/css/beershop.css">
+        <link rel="stylesheet" href="../html/assets/css/common.css">
+        <link rel="stylesheet" href="../html/assets/css/index.css">
+        <link rel="stylesheet" href="../html/assets/css/cart.css">
+        <link rel="stylesheet" href="../html/assets/css/responsive.css">
     </head>
     <body>
         <div id="wrapper">
             <?php include VIEW_PATH . 'templates/header_logined.php'; ?>
             <main>
-                <?php if(!empty($beer_id) && !empty($amount) && count($msg) === 0) { ?>
+                <?php if(!empty($beer_id) && !empty($amount)) { ?>
                     <div class="cart_content">
                         <form action="../html/cart_confirm.php" class="form" method="post">
                             <h1 class="cart_title">購入商品</h1>

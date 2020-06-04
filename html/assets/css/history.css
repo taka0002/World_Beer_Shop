@@ -1,0 +1,29 @@
+.cart_table.history {
+    padding:10px 0;
+}
+.cart_table.history span,
+.cart_table.history p {
+    font-size:18px;
+}
+.cart_table.history img.img {
+    width: 100px;
+    height:100px;
+    text-align: center;
+}
+.cart_table.history:last-child {
+    border-bottom:none;
+}
+.cart_table.history p {
+    margin:0;
+}
+
+.pagi_nation {
+    text-align: center;
+    font-size:20px;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.current_page {
+  color: #ff0000;
+}
