@@ -1,0 +1,22 @@
+.logout_text {
+    font-weight:bold;
+    font-size:24px;
+}
+.logout_buton {
+    width:350px;
+    margin: 0 auto;
+    font-size:24px;
+    margin-top:15px;
+}
+.logout_buton a {
+    color: #ffffff;
+    font-weight:normal;
+    display: block;
+    background-color: #87cefa;
+    padding:10px 0;
+    transition: 0.7s;
+}
+
+.logout_buton a:hover {
+    opacity:0.6;
+}

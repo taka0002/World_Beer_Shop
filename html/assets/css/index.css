@@ -1,0 +1,338 @@
+.drink_featured .price {
+    text-align:center;
+    font-size:28px;
+    color:#ff0000;
+}
+
+.drink_featured .price {
+    text-align:center;
+    font-size:28px;
+    color:#ff0000;
+}
+
+.drink span.price {
+    color:#ff0000;
+    font-size:28px;
+}
+
+/*item_〇〇.php*/
+.description_europe,
+.description_america,
+.description_asia,
+.description_japan {
+    font-size:20px;
+    width:80%;
+    margin:50px auto;
+    border-radius:30px;
+    padding:20px;
+    filter: drop-shadow(10px 10px 10px rgba(0,0,0,0.6));
+}
+
+.description_europe,
+.description_asia {
+    background-color:#f0f8ff;
+}
+
+.description_america,
+.description_japan {
+    background-color:#fffff0;
+}
+
+.description_europe h2,
+.description_america h2,
+.description_asia h2,
+.description_japan h2 {
+    text-align:center;
+}
+
+.sort {
+  margin:0 auto;
+  background:#ffffff;
+  width:80%;
+}
+.sort form {
+    text-align:right;
+}
+.sort form select {
+    -webkit-appearance:button;
+    font-size:14px;
+    padding:10px 0;
+}
+.sort form input {
+    width:80px;
+}
+
+.more {
+ text-align:center;
+ font-weight:bold;
+}
+
+.featured {
+  overflow-x: auto;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+  background-color:#696969;
+  list-style:none;
+  padding-left:0;
+}
+
+.item {
+    /* 横スクロール用 */
+      display: inline-block;
+
+      /* 見た目調整 */
+      margin: 20px 0 0;
+}
+.item .item_img {
+    height: 250px;
+    width: 250px;
+    display: block;
+    margin: 0 auto;
+    filter: drop-shadow(10px 10px 10px rgba(0,0,0,0.6));
+}
+
+.item .popup_content .item_img  {
+     filter:none;
+}
+
+.item .popup .popup_content .item_img {
+    height: 300px;
+    width: 300px;
+    margin-bottom: 20px;
+}
+
+.featured_name {
+    color:#ffffff;
+}
+
+.sort form input.rearranges {
+    background-color:#87cefa;
+    width: 110px;
+    font-size: 16px;
+    padding: 2px 3px 1px 1px;
+    margin-left:10px;
+    color:#ffffff;
+}
+
+img {
+    width:80%;
+}
+.slider {
+    text-align: center;
+    background-color:#dcdcdc;
+    border-bottom: 1px solid #000000;
+}
+
+img,
+.slider {
+    height:620px;
+}
+.area {
+    width:80%;
+    margin:0 auto;
+}
+.area a {
+    color: #000000;
+}
+.europe,
+.asia,
+.america,
+.japan {
+    display:flex;
+    transition: 0.7s;
+    border-radius: 30px;
+    margin:50px 0;
+    padding:20px 0;
+    align-items: center;
+    justify-content: center;
+    filter: drop-shadow(10px 10px 10px rgba(0,0,0,0.6));
+}
+.europe:hover,
+.asia:hover,
+.america:hover,
+.japan:hover {
+    opacity:0.5;
+    background-color:#cccccc;
+    transition:1.5s;
+}
+.europe,
+.asia {
+    background-color:#f0f8ff;
+}
+.america,
+.japan {
+    background-color:#fffff0;
+}
+
+.area_img {
+    flex:1;
+    width:300px;
+    height:240px;
+}
+
+.europe .area_img,
+.asia .area_img {
+    padding-left:20px;
+}
+
+.america .area_img,
+.japan .area_img {
+    padding-right:20px;
+}
+
+.area_text {
+    flex:3;
+}
+
+.area_text h2 {
+    text-align:center;
+    margin-top:30px;
+}
+
+.area_text p {
+    padding:0 20px;
+    font-size:18px;
+}
+
+/*それぞれの地域の商品を配列するときのcss*/
+#flex {
+    margin:0 auto;
+    width:80%;
+}
+#flex_featured {
+    margin:0 auto;
+}
+#flex_featured h2 {
+    text-align:center;
+}
+.drink span {
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 80%;
+    margin: 3px auto;
+    text-align: center;
+    font-size:20px;
+}
+.drink_featured span {
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 80%;
+    margin: 3px auto;
+    text-align: center;
+    font-size:20px;
+}
+#flex .drink {
+    width: 360px;
+    height: 450px;
+    text-align: center;
+    margin: 10px;
+    display: inline-block; 
+}
+
+.item_img {
+    height: 300px;
+    width: 300px;
+    display:block;
+    margin: 0 auto;
+    filter: drop-shadow(5px 5px 5px rgba(0,0,0,0.4));
+    border:5px solid #dcdcdc;
+}
+.item_img:hover {
+    opacity:0.5;
+    transition:0.6s;
+}
+.submit {
+    clear:left;
+}
+.drink .red {
+    color:#ff0000;
+    font-size:24px;
+    margin-bottom: -7px;
+}
+.drink_featured .red {
+    color:#ff0000;
+    font-size:24px;
+    margin-bottom: -7px;
+}
+.cart-btn {
+    background-color: #87cefa;
+    color: #ffffff;
+    border-radius: 10px;
+    width: 70%;
+}
+.cart-btn:hover {
+    opacity:0.5;
+    transition:0.6s;
+}
+
+
+/*ポップアップ関連*/
+.popup {
+    z-index:2;
+    display: none;
+    height: 100vh;
+    width: 100%;
+    background: #000000;
+    opacity: 0.95;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow-y: auto;
+}
+ 
+.popup_content{
+    padding: 20px;
+    width: 50%;
+    border-radius:70px;
+    background-color:#fffacd;
+}
+
+.popup_content img:hover {
+    opacity:1;
+}
+.show {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.item_description {
+    border-color: transparent;
+    padding:0;
+}
+
+.popup_content img {
+    border:none;
+    filter:none;
+    margin-bottom:20px;
+}
+.popup_content span {
+    text-align:left;
+}
+.close {
+    background-color:#87cefa;
+    width: 70%;
+    font-size:20px;
+    color: #ffffff;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+.close:hover {
+    opacity:0.5;
+    transition:0.6s;
+}
+.drink span.comment_title {
+    padding: 10px 0;
+    text-align: center;
+}
+.drink_featured span.comment_title {
+    padding: 10px 0;
+    text-align: center;
+}
+.scroll {
+    white-space:normal;
+    overflow-y:scroll;
+    height: 287px;
+}

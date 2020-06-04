@@ -3,7 +3,9 @@
     <head>
         <title>世界のビールSHOP</title>
         <?php include VIEW_PATH . 'templates/head.php'; ?>
-        <link rel="stylesheet" href="../html/assets/css/beershop.css">
+        <link rel="stylesheet" href="../html/assets/css/common.css">
+        <link rel="stylesheet" href="../html/assets/css/index.css">
+        <link rel="stylesheet" href="../html/assets/css/responsive.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script type="text/javascript" src="../html/assets/js/top.js"></script>
         <script type="text/javascript" src="../html/assets/js/popup.js"></script>
