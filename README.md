@@ -1,5 +1,7 @@
 # World_beershop
 オリジナルECサイトです。
+（テスト用ユーザー名：test01）
+（テスト用パスワード：password）
 
 【使用言語など】
 HTML/CSS、JavaScript、jQuery、PHP、MySQL、GitHub、Docker
