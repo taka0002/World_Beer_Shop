@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ja">
     <head>
-        <title>World Beer Shop｜ログアウト画面</title>
+        <title>World Beer Shop｜ログアウト</title>
         <?php include VIEW_PATH . 'templates/head.php'; ?>
         <link rel="stylesheet" href="../html/assets/css/common.css">
         <link rel="stylesheet" href="../html/assets/css/logout.css">

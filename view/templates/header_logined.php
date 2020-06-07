@@ -23,9 +23,11 @@
                 <?php } ?>
             </span>
         </div>
-        <div class="logout_header">
-            <a href="../html/logout.php" class="logout">ログアウト</a>
-        </div>
+        <?php if (isset($_SESSION['user_id'])) { ?>
+            <div class="logout_header">
+                <a href="../html/logout.php" class="logout">ログアウト</a>
+            </div>
+        <?php } ?>
     </div>
     <div>
         <?php foreach(get_messages() as $message){ ?>
