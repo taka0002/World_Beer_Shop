@@ -1,14 +1,12 @@
 <!DOCTYPE html>
 <html lang="ja">
     <head>
-        <title>登録完了画面</title>
+        <title>World Beer Shop｜登録完了画面</title>
         <?php include VIEW_PATH . 'templates/head.php'; ?>
         <link rel="stylesheet" href="../html/assets/css/common.css">
         <link rel="stylesheet" href="../html/assets/css/signup.css">
         <link rel="stylesheet" href="../html/assets/css/login.css">
         <link rel="stylesheet" href="../html/assets/css/responsive.css">
-        <style>
-        </style>
     </head>
     <body>
         <header>
