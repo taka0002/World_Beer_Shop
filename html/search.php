@@ -5,27 +5,20 @@ require_once MODEL_PATH . 'item.php';
 require_once MODEL_PATH . 'cart.php';
 require_once MODEL_PATH . 'functions.php';
 
+$items = array();
+
+$db = get_db_connect();
+
 // セッション開始
 session_start();
 
 // 登録データを取得できたか確認
-if (!isset($_SESSION['user_id'])) {
-  
-  // ログイン済みユーザのホームページへリダイレクト
-  header('Location: login.php');
-  exit;
-  
+if (isset($_SESSION['user_id'])) {
+    
+    $user_id = $_SESSION['user_id'];
+    $user_name = get_user_name($db, $user_id);
+    $count = count(get_count($db, $user_id));
 }
-
-$items = array();
-
-$user_id = $_SESSION['user_id'];
-
-$db = get_db_connect();
-
-$user_name = get_user_name($db, $user_id);
-
-$count = count(get_count($db, $user_id));
     
 $area = get_get('area');
 

@@ -1,7 +1,13 @@
 <header>
     <div class="top_header_box">
         <div class="top_header">
-            <a href="../html/index.php" class="name">ようこそ<?php print $user_name['username']; ?>さん</a>
+            <a href="../html/index.php" class="name">
+                <?php if (isset($_SESSION['user_id'])) { ?>
+                    ようこそ<?php print $user_name['username']; ?>さん
+                <?php } else { ?>
+                    World Beer Shop
+                <?php } ?>
+            </a>
             <div class="area_header">
                 <ul>
                     <li><a href="../html/index_europe.php" class="area_top">ヨーロッパ</a></li>
@@ -11,7 +17,11 @@
                 </ul>
             </div>
             <a href="../html/cart.php" class="cart"><img src="../html/assets/img/icon.png" ></a>
-            <span class="amount"><?php print $count; ?></span>
+            <span class="amount">
+                <?php if (isset($_SESSION['user_id'])) { ?>
+                    <?php print $count; ?>
+                <?php } ?>
+            </span>
         </div>
         <div class="logout_header">
             <a href="../html/logout.php" class="logout">ログアウト</a>
@@ -24,7 +34,13 @@
     </div>
     <div class="nav_bar border">
     <div class="buy_history">
-        <a href="../html/history.php">購入履歴はこちら＞＞</a>
+        <a href="../html/history.php">
+            <?php if (isset($_SESSION['user_id'])) { ?>
+                購入履歴はこちら＞＞
+            <?php } else { ?>
+                <a href="../html/login.php">購入時はログインが必要です＞＞</a>
+            <?php } ?>
+        </a>
     </div>
         <form method="get" action=../html/search.php>
             <ul>

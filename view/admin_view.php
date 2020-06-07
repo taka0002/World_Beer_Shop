@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ja">
     <head>
-        <title>管理ツール</title>
+        <title>World Beer Shop｜管理ツール</title>
         <?php include VIEW_PATH . 'templates/head.php'; ?>
         <link rel="stylesheet" href="../html/assets/css/admin.css">
     </head>

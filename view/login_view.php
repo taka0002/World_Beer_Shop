@@ -1,14 +1,12 @@
 <!DOCTYPE html>
 <html lang="ja">
     <head>
-        <title>ログイン画面</title>
+        <title>World Beer Shop｜ログイン画面</title>
         <?php include VIEW_PATH . 'templates/head.php'; ?>
         <link rel="stylesheet" href="../html/assets/css/common.css">
         <link rel="stylesheet" href="../html/assets/css/login.css">
         <link rel="stylesheet" href="../html/assets/css/responsive.css">
         <link rel="stylesheet" href="../html/assets/css/signup.css">
-        <style>
-        </style>
     </head>
     <body>
         <?php include VIEW_PATH . 'templates/header.php'; ?>
@@ -34,6 +32,10 @@
                 </form>
                 <div class="new_button">
                     <a href="../html/signup.php">新規追加</a>
+                </div>
+                <div class="test">
+                    <p>テスト用ユーザー名：test01</p>
+                    <p>テスト用パスワード：password</p>
                 </div>
             </div>
         </div>
