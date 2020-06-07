@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ja">
     <head>
-        <title>World Beer Shop｜購入手続きページ</title>
+        <title>World Beer Shop｜購入手続き</title>
         <?php include VIEW_PATH . 'templates/head.php'; ?>
         <link rel="stylesheet" href="../html/assets/css/common.css">
         <link rel="stylesheet" href="../html/assets/css/index.css">
