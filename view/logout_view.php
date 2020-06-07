@@ -17,7 +17,7 @@
                     <a href="../html/login.php">再度ログインページへ</a>
                 </div>
                 <div class="logout_buton">
-                    <a href="../html/index.php">ログインせずにトップページへ戻る</a>
+                    <a href="../html/index.php">ログインせずにトップページへ</a>
                 </div>
             </div>
         </div>
