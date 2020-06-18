@@ -17,6 +17,7 @@ input.button {
     width:306px;
     margin-top:15px;
     transition: 0.7s;
+    border: none;
 }
 input.button:hover {
     opacity:0.6;

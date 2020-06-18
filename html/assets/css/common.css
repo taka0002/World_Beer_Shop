@@ -241,6 +241,7 @@ select{
     padding: 2px 3px 1px 1px;
     margin-left: 10px;
     color: #ffffff;
+    border: none;
 }
 
 .nav_bar form select {
