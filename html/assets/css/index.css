@@ -56,7 +56,7 @@
 .sort form select {
     -webkit-appearance:button;
     font-size:14px;
-    padding:10px 0;
+    padding: 10px 5px;
 }
 .sort form input {
     width:80px;
@@ -112,6 +112,7 @@
     padding: 2px 3px 1px 1px;
     margin-left:10px;
     color:#ffffff;
+    border: none;
 }
 
 img {
@@ -261,6 +262,7 @@ img,
     color: #ffffff;
     border-radius: 10px;
     width: 70%;
+    border:none;
 }
 .cart-btn:hover {
     opacity:0.5;
@@ -318,6 +320,7 @@ img,
     color: #ffffff;
     border-radius: 10px;
     margin-top: 10px;
+    border: none;
 }
 .close:hover {
     opacity:0.5;
