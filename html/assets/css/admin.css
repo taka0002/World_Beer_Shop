@@ -13,6 +13,9 @@ img {
     width: 125px;
     height: 125px;
 }
+label input {
+    width: 100px;
+}
 h1, form {
     border-bottom:2px solid;
     padding-bottom:30px;
