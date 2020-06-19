@@ -4,6 +4,8 @@ require_once MODEL_PATH . 'db.php';
 require_once MODEL_PATH . 'item.php';
 require_once MODEL_PATH . 'functions.php';
 
+session_start();
+
 $db = get_db_connect();
 
 $items = get_items($db);
