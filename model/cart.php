@@ -203,7 +203,7 @@ return execute_query($db, $sql, array($user_id, $name1, $name2, $kana1, $kana2, 
 function purchase_carts($db, $carts, $update_datetime, $user_id, $name1, $name2, $kana1, $kana2, $zipcode, $addr1, $addr2, $tel, $email, $pay, $create_datetime, $beer_id, $amount) {
     $get_stock = get_stock($db, $beer_id);
     if($get_stock['stock'] < $amount) {
-        set_message('在庫数が足りないので変更できません。' . $get_stock['stock'] . '個までなら購入できます。');
+        set_message('在庫数が足りないので変更できません。');
         return false;
     }
     if(empty($beer_id) && empty($amount)) {

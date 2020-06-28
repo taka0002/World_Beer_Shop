@@ -25,7 +25,7 @@ define('DB_CHARSET', 'utf8');
 //admin.php関連
 define('REGEXP_ALPHANUMERIC_newprice', '/^[0-9]*$/');
 define('REGEXP_ALPHANUMERIC_stock', '/^[0-9]*$/');
-define('REGEXP_ALPHANUMERIC_update_stock', '/^[1-9]*$/');
+define('REGEXP_ALPHANUMERIC_update_stock', '/(?<!-)[1-9]\d*/u');
 define('REGEXP_ALPHANUMERIC_status', '/^[0-1]*$/');
 define('REGEXP_ALPHANUMERIC_featured', '/^[0-1]*$/');
 define('REGEXP_ALPHANUMERIC_type_sharp', '/^[0-2]*$/');

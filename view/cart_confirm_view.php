@@ -112,7 +112,7 @@
                             <input type="hidden" name="csrf_token" value="<?php print $token; ?>">
                         </form>
                         <form action="../html/cart_pay.php" method="post">
-                            <!--戻るボタンを押したときに入力した部分がそのまま表示されるようにしたい（SESSIONを使う）-->
+                            <!--戻るボタンを押したときに入力した部分がそのまま表示されるようにしたい（cookieを使う）-->
                             <div class="return">
                                 <input class="buy-btn return_button" type="submit" value="入力画面に戻る">
                                 <?php foreach($carts as $value) { ?>
