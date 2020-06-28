@@ -38,6 +38,4 @@ $get_user_id = get_user_id($db, $user_name, $pass_word);
 
 user_confirm($db, $get_user_id);
 
-get_post_data($key);
-
 ?>

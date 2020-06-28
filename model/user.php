@@ -1,3 +1,4 @@
+<!--user.php-->
 <?php
 require_once '../model/functions.php';
 require_once '../model/db.php';
@@ -89,15 +90,6 @@ function user_confirm($db, $get_user_id) {
     }
 }
 
-//POSTデータから任意データの取得
-function get_post_data($key) {
-  $str = '';
-  if (isset($_POST[$key])) {
-    $str = $_POST[$key];
-  }
-  return $str;
-}
-
 function send_mail($name1, $name2, $zipcode, $addr1, $addr2, $tel, $email, $pay){
     //言語と文字コードの使用宣言
     mb_language("ja");
@@ -119,7 +111,7 @@ function send_mail($name1, $name2, $zipcode, $addr1, $addr2, $tel, $email, $pay)
     $message_3 = "\r\n\r\nまたの購入をお待ちしております。";
     $header = "From: ttakka365@gmail.com\r\n";
     $header .= "Return-Path: ttakka365@gmail.com\r\n";
-    $param = "-f ttakka365@gmail.com";
+    $param = "-fttakka365@gmail.com";
     
     return mb_send_mail($email, $subject, $message_1 . $message_2 . $message_3, $header, $param);
 }
