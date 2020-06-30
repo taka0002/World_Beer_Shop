@@ -30,7 +30,7 @@ function get_items($db){
   return fetch_all_query($db, $sql);
 }
 
-function insert_items($db,$newname, $newprice, $status, $stock, $type_sharp, $type_acidity, $type_bitterness, $type_sweetness, $type_tasty, $appetizers, $area, $comment, $featured, $create_datetime, $update_datetime){
+function insert_items($db, $newname, $newprice, $status, $stock, $type_sharp, $type_acidity, $type_bitterness, $type_sweetness, $type_tasty, $appetizers, $area, $comment, $featured, $create_datetime, $update_datetime){
     
     if($newname === '') {
         set_message('登録できませんでした。もう一度やり直してください。');
@@ -389,7 +389,7 @@ function delete_item($db,$beer_id) {
   return execute_query($db, $sql, array($beer_id));
 }
 
-function get_search_all($db, $area, $appetizers, $name) {
+function get_search_all($db, $area, $appetizers, $name, $status) {
     
   $sql = '
     SELECT
@@ -410,16 +410,18 @@ function get_search_all($db, $area, $appetizers, $name) {
     FROM
         items
     WHERE
+        status = ?
+    AND
         area = ?
     or
         appetizers = ?
     or
         name LIKE ?';
   
-    return fetch_all_query($db, $sql, array($area, $appetizers, '%' . $name . '%'));
+    return fetch_all_query($db, $sql, array($status, $area, $appetizers, '%' . $name . '%'));
 }
 
-function get_search_area_appetizers($db, $area, $appetizers) {
+function get_search_area_appetizers($db, $area, $appetizers, $status) {
     
   $sql = '
     SELECT
@@ -440,14 +442,16 @@ function get_search_area_appetizers($db, $area, $appetizers) {
     FROM
         items
     WHERE
+        status = ?
+    AND
         area = ?
     or
         appetizers = ?';
   
-    return fetch_all_query($db, $sql, array($area, $appetizers));
+    return fetch_all_query($db, $sql, array($status, $area, $appetizers));
 }
 
-function get_search_area_name($db, $area, $name) {
+function get_search_area_name($db, $area, $name, $status) {
     
   $sql = '
     SELECT
@@ -468,14 +472,16 @@ function get_search_area_name($db, $area, $name) {
     FROM
         items
     WHERE
+        status = ?
+    AND
         area = ?
     or
         name LIKE ?';
   
-    return fetch_all_query($db, $sql, array($area, '%' . $name . '%'));
+    return fetch_all_query($db, $sql, array($status, $area, '%' . $name . '%'));
 }
 
-function get_search_appetizers_name($db, $appetizers, $name) {
+function get_search_appetizers_name($db, $appetizers, $name, $status) {
     
   $sql = '
     SELECT
@@ -496,14 +502,16 @@ function get_search_appetizers_name($db, $appetizers, $name) {
     FROM
         items
     WHERE
+        status = ?
+    AND
         appetizers = ?
     or
         name LIKE ?';
   
-    return fetch_all_query($db, $sql, array($appetizers, '%' . $name . '%'));
+    return fetch_all_query($db, $sql, array($status, $appetizers, '%' . $name . '%'));
 }
 
-function get_search_area($db, $area) {
+function get_search_area($db, $area, $status) {
     
   $sql = '
     SELECT
@@ -524,12 +532,14 @@ function get_search_area($db, $area) {
     FROM
         items
     WHERE
+        status = ?
+    AND
         area =  ?';
   
-    return fetch_all_query($db, $sql, array($area));
+    return fetch_all_query($db, $sql, array($status, $area));
 }
 
-function get_search_appetizers($db, $appetizers) {
+function get_search_appetizers($db, $appetizers, $status) {
     
   $sql = '
     SELECT
@@ -550,12 +560,14 @@ function get_search_appetizers($db, $appetizers) {
     FROM
         items
     WHERE
+        status = ?
+    AND
         appetizers = ?';
   
-    return fetch_all_query($db, $sql, array($appetizers));
+    return fetch_all_query($db, $sql, array($status, $appetizers));
 }
 
-function get_search_name($db, $name) {
+function get_search_name($db, $name, $status) {
   $sql = '
     SELECT
         beer_id,
@@ -575,9 +587,11 @@ function get_search_name($db, $name) {
     FROM
         items
     WHERE
+        status = ?
+    AND
         name LIKE ?';
   
-    return fetch_all_query($db, $sql, array('%' . $name . '%'));
+    return fetch_all_query($db, $sql, array($status, '%' . $name . '%'));
 }
 
 ?>
