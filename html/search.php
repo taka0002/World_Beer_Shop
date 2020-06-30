@@ -30,31 +30,31 @@ $name = preg_replace('/^[ 　]+/u', '', $name);
 
 if($area !== "" && $appetizers !== "" && $name !== "") {
     
-    $items = get_search_all($db, $area, $appetizers, $name);
+    $items = get_search_all($db, $area, $appetizers, $name, $status = 1);
     
 } else if($area !== "" && $appetizers !== "") {
     
-    $items = get_search_area_appetizers($db, $area, $appetizers);
+    $items = get_search_area_appetizers($db, $area, $appetizers, $status = 1);
     
 } else if($area !== "" && $name !== "") {
     
-    $items = get_search_area_name($db, $area, $name);
+    $items = get_search_area_name($db, $area, $name, $status = 1);
     
 } else if($appetizers !== "" && $name !== "") {
     
-    $items = get_search_appetizers_name($db, $appetizers, $name);
+    $items = get_search_appetizers_name($db, $appetizers, $name, $status = 1);
     
 } else if($area !== "") {
     
-    $items = get_search_area($db, $area);
+    $items = get_search_area($db, $area, $status = 1);
     
 } else if($appetizers !== "") {
     
-    $items = get_search_appetizers($db, $appetizers);
+    $items = get_search_appetizers($db, $appetizers, $status = 1);
     
 } else if($name !== "") {
     
-    $items = get_search_name($db, $name);
+    $items = get_search_name($db, $name, $status = 1);
     
 } 
 
