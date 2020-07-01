@@ -412,11 +412,11 @@ function get_search_all($db, $area, $appetizers, $name, $status) {
     WHERE
         status = ?
     AND
-        area = ?
+        (area = ?
     or
         appetizers = ?
     or
-        name LIKE ?';
+        name LIKE ?)';
   
     return fetch_all_query($db, $sql, array($status, $area, $appetizers, '%' . $name . '%'));
 }
@@ -444,9 +444,9 @@ function get_search_area_appetizers($db, $area, $appetizers, $status) {
     WHERE
         status = ?
     AND
-        area = ?
+        (area = ?
     or
-        appetizers = ?';
+        appetizers = ?)';
   
     return fetch_all_query($db, $sql, array($status, $area, $appetizers));
 }
@@ -474,9 +474,9 @@ function get_search_area_name($db, $area, $name, $status) {
     WHERE
         status = ?
     AND
-        area = ?
+        (area = ?
     or
-        name LIKE ?';
+        name LIKE ?)';
   
     return fetch_all_query($db, $sql, array($status, $area, '%' . $name . '%'));
 }
@@ -504,9 +504,9 @@ function get_search_appetizers_name($db, $appetizers, $name, $status) {
     WHERE
         status = ?
     AND
-        appetizers = ?
+        (appetizers = ?
     or
-        name LIKE ?';
+        name LIKE ?)';
   
     return fetch_all_query($db, $sql, array($status, $appetizers, '%' . $name . '%'));
 }
