@@ -6,9 +6,6 @@ table, tr, th, td {
   padding: 10px;
   text-align: center;
 }
-td.img {
-    width:300px;
-}
 img {
     width: 125px;
     height: 125px;

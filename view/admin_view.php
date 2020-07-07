@@ -4,6 +4,7 @@
         <title>World Beer Shop｜管理ツール</title>
         <?php include VIEW_PATH . 'templates/head.php'; ?>
         <link rel="stylesheet" href="../html/assets/css/admin.css">
+        <?php include VIEW_PATH . 'templates/header_bootstrap.php'; ?>
     </head>
     <body>
         <h1>商品管理ページ</h1>
@@ -13,7 +14,8 @@
                   <p><?php print $message; ?></p>
                 <?php } ?>
             </div>
-            <a href="./user.php">ユーザー管理ページはこちら</a>
+            <p><a href="./user.php">ユーザー管理ページはこちら</a></p>
+            <p><a href="./customer_history.php">購入者情報ページはこちら</a></p>
             <h2>新規商品追加</h2>
             <form method='post' enctype="multipart/form-data" action="../html/admin_insert_item.php">
                 <div><label>名前: <input type="text" name="newname" value=''></label></div>
@@ -96,127 +98,131 @@
             </form>
             </div>
             <div>
-            <h2>商品情報変更</h2>
-            <p>商品一覧</p>
-            <table>
-                <tr>
-                    <th class=img>商品画像</th>
-                    <th>商品名</th>
-                    <th>価格</th>
-                    <th>おすすめおつまみ</th>
-                    <th>地域</th>
-                    <th>在庫数</th>
-                    <th>ステータス</th>
-                    <th>操作</th>
-                    <th>注目アイテム</th>
-                </tr>
-                <?php foreach($items as $value) { ?>
-                <!--条件式 ? 式1 : 式2-->
-                <tr class="<?php print $value['status']  === 0 ? "false" : "" ?>">
-                <td class=img><img src="<?php print $img_dir . $value['img']; ?>"></td>
-                <td><?php print h($value['name']); ?></td>
-                <td><?php print $value['price'] . "円"; ?></td>
-                
-                <!--おつまみに関する記述 -->
-                <td>
-                    <?php if((int)$value['appetizers'] === 0) { ?>
-                    
-                        ナッツ
-                        
-                    <?php } else if((int)$value['appetizers'] === 1) { ?>
-                    
-                        枝豆
-                        
-                    <?php } else if((int)$value['appetizers'] === 2) { ?>
-                    
-                        たこわさ
-                        
-                    <?php } else if((int)$value['appetizers'] === 3) { ?>
-                    
-                        お刺身
-                    
-                    <?php } else { ?>
-                    
-                        餃子
-                    
-                    <?php } ?>
-                </td>
-                
-                <!--地域に関する記述 -->
-                <td>
-                    <?php if((int)$value['area'] === 0) { ?>
-                    
-                        ヨーロッパ
-                        
-                    <?php } else if((int)$value['area'] === 1) { ?>
-                    
-                        アメリカ
-                        
-                    <?php } else if((int)$value['area'] === 2) { ?>
-                    
-                        アジア
-                        
-                    <?php } else { ?>
-                    
-                        日本
-                    
-                    <?php } ?>
-                </td>
-                
-                <!--在庫数の変更についての記述 -->
-                <form method='post' action="../html/admin_change_stock.php">
-                <td>
-                <label><input type='number' name="update_stock" value="<?php print $value['stock']; ?>" size=10>個</label>
-                <input type="hidden" name="beer_id" value="<?php print $value['beer_id']; ?>">
-                <input type="submit" value="変更">
-                </td>
-                </form>
-                
-                <!--ステータスの変更についての記述 -->
-                <form method="post" action="../html/admin_change_status.php">
-                <td>
-                    <?php if((int)$value['status'] === 0) { ?>
-                       
-                       <input type="submit" name = "change_status" value="非公開→公開">
-                    
-                    <?php } else { ?>
-                        
-                       <input type="submit" name = "change_status" value="公開→非公開">
-                    
-                    <?php } ?>
-                    <input type="hidden" name="beer_id" value="<?php print $value['beer_id']; ?>">
-                    <input type="hidden" name="status" value="<?php print $value['status']; ?>">
-                </td>
-                </form>
-                
-                <!--削除についての記述 -->
-                <form method='post' action="../html/admin_delete_item.php">
-                <td>
-                    <input type="hidden" name="beer_id" value="<?php print $value['beer_id']; ?>">
-                    <input type="submit" value="削除">
-                </td>
-                </form>
-                
-                 <!--注目アイテムのステータスの変更についての記述 -->
-                <form method="post" action="../html/admin_change_featured.php">
-                <td>
-                    <?php if((int)$value['featured'] === 0) { ?>
-                       
-                       <input type="submit" name = "change_status" value="注目アイテムに入れる">
-                    
-                    <?php } else { ?>
-                        
-                       <input type="submit" name = "change_status" value="注目アイテムから外す">
-                    
-                    <?php } ?>
-                    <input type="hidden" name="featured" value="<?php print $value['featured']; ?>">
-                    <input type="hidden" name="beer_id" value="<?php print $value['beer_id']; ?>">
-                </td>
-                </form>
-                
-                </tr>
-                <?php } ?>
-            </table>
+                <h2>商品情報変更</h2>
+                <p>商品一覧</p>
+                <div class="container">
+                    <div class="table-responsive">
+                        <table class="table table-striped table-bordered">
+                            <tr>
+                                <th class=img>商品画像</th>
+                                <th>商品名</th>
+                                <th>価格</th>
+                                <th>おつまみ</th>
+                                <th>地域</th>
+                                <th>在庫数</th>
+                                <th>ステータス</th>
+                                <th>操作</th>
+                                <th>注目アイテム</th>
+                            </tr>
+                            <?php foreach($items as $value) { ?>
+                            <!--条件式 ? 式1 : 式2-->
+                            <tr class="<?php print $value['status']  === 0 ? "false" : "" ?>">
+                            <td class=img><img src="<?php print $img_dir . $value['img']; ?>"></td>
+                            <td><?php print h($value['name']); ?></td>
+                            <td><?php print $value['price'] . "円"; ?></td>
+                            
+                            <!--おつまみに関する記述 -->
+                            <td>
+                                <?php if((int)$value['appetizers'] === 0) { ?>
+                                
+                                    ナッツ
+                                    
+                                <?php } else if((int)$value['appetizers'] === 1) { ?>
+                                
+                                    枝豆
+                                    
+                                <?php } else if((int)$value['appetizers'] === 2) { ?>
+                                
+                                    たこわさ
+                                    
+                                <?php } else if((int)$value['appetizers'] === 3) { ?>
+                                
+                                    お刺身
+                                
+                                <?php } else { ?>
+                                
+                                    餃子
+                                
+                                <?php } ?>
+                            </td>
+                            
+                            <!--地域に関する記述 -->
+                            <td>
+                                <?php if((int)$value['area'] === 0) { ?>
+                                
+                                    ヨーロッパ
+                                    
+                                <?php } else if((int)$value['area'] === 1) { ?>
+                                
+                                    アメリカ
+                                    
+                                <?php } else if((int)$value['area'] === 2) { ?>
+                                
+                                    アジア
+                                    
+                                <?php } else { ?>
+                                
+                                    日本
+                                
+                                <?php } ?>
+                            </td>
+                            
+                            <!--在庫数の変更についての記述 -->
+                            <form method='post' action="../html/admin_change_stock.php">
+                            <td>
+                            <label><input type='number' name="update_stock" value="<?php print $value['stock']; ?>" size=10>個</label>
+                            <input type="hidden" name="beer_id" value="<?php print $value['beer_id']; ?>">
+                            <input type="submit" value="変更">
+                            </td>
+                            </form>
+                            
+                            <!--ステータスの変更についての記述 -->
+                            <form method="post" action="../html/admin_change_status.php">
+                            <td>
+                                <?php if((int)$value['status'] === 0) { ?>
+                                   
+                                   <input type="submit" name = "change_status" value="非公開→公開">
+                                
+                                <?php } else { ?>
+                                    
+                                   <input type="submit" name = "change_status" value="公開→非公開">
+                                
+                                <?php } ?>
+                                <input type="hidden" name="beer_id" value="<?php print $value['beer_id']; ?>">
+                                <input type="hidden" name="status" value="<?php print $value['status']; ?>">
+                            </td>
+                            </form>
+                            
+                            <!--削除についての記述 -->
+                            <form method='post' action="../html/admin_delete_item.php">
+                            <td>
+                                <input type="hidden" name="beer_id" value="<?php print $value['beer_id']; ?>">
+                                <input type="submit" value="削除">
+                            </td>
+                            </form>
+                            
+                             <!--注目アイテムのステータスの変更についての記述 -->
+                            <form method="post" action="../html/admin_change_featured.php">
+                            <td>
+                                <?php if((int)$value['featured'] === 0) { ?>
+                                   
+                                   <input type="submit" name = "change_status" value="注目アイテムに入れる">
+                                
+                                <?php } else { ?>
+                                    
+                                   <input type="submit" name = "change_status" value="注目アイテムから外す">
+                                
+                                <?php } ?>
+                                <input type="hidden" name="featured" value="<?php print $value['featured']; ?>">
+                                <input type="hidden" name="beer_id" value="<?php print $value['beer_id']; ?>">
+                            </td>
+                            </form>
+                            
+                            </tr>
+                            <?php } ?>
+                        </table>
+                    </div>
+                </div>
             </div>
         </div>
     </body>

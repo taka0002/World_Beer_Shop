@@ -16,6 +16,33 @@ function get_users($db){
   return fetch_all_query($db, $sql);
 }
 
+function get_customer_history($db){
+  $sql = '
+    SELECT
+        customer_history.user_id,
+        customer_history.name1,
+        customer_history.name2,
+        customer_history.kana1,
+        customer_history.kana2,
+        customer_history.zipcode,
+        customer_history.addr1,
+        customer_history.addr2,
+        customer_history.tel,
+        customer_history.email,
+        customer_history.pay,
+        customer_history.create_datetime,
+        users.username
+    FROM
+        customer_history
+    INNER JOIN
+        users
+    ON
+        customer_history.user_id = users.user_id
+  ';
+    
+  return fetch_all_query($db, $sql);
+}
+
 //register_complete.php
 function insert_users($db, $user_name , $pass_word , $createdate , $updatedate) {
     if(!preg_match(REGEXP_ALPHANUMERIC_user_name, $user_name) && !preg_match(REGEXP_ALPHANUMERIC_pass_word, $pass_word)){
