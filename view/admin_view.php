@@ -102,7 +102,7 @@
                 <p>商品一覧</p>
                 <div class="container">
                     <div class="table-responsive">
-                        <table class="table table-striped table-bordered">
+                        <table class="table table-bordered">
                             <tr>
                                 <th class=img>商品画像</th>
                                 <th>商品名</th>
