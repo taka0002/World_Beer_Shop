@@ -32,6 +32,14 @@ function sum_carts($carts){
   }
   return $total_price;
 }
+//管理画面の購入者情報における小計の定義
+function customer_sum_carts($get_customer_history_detail){
+  $customer_total_price = 0;
+  foreach($get_customer_history_detail as $customer_cart){
+    $customer_total_price += $customer_cart['price'] * $customer_cart['amount'];
+  }
+  return $customer_total_price;
+}
 
 function get_identify_cart($db, $user_id, $beer_id){
   $sql = '
@@ -241,5 +249,57 @@ function get_history($db, $user_id){
   return fetch_all_query($db, $sql);
 }
 
+function get_customer_history($db){
+  $sql = '
+    SELECT
+        customer_history.history_id,
+        customer_history.user_id,
+        customer_history.name1,
+        customer_history.name2,
+        customer_history.kana1,
+        customer_history.kana2,
+        customer_history.zipcode,
+        customer_history.addr1,
+        customer_history.addr2,
+        customer_history.tel,
+        customer_history.email,
+        customer_history.pay,
+        customer_history.create_datetime,
+        users.username
+    FROM
+        customer_history
+    INNER JOIN
+        users
+    ON
+        customer_history.user_id = users.user_id
+  ';
+    
+  return fetch_all_query($db, $sql);
+}
+
+function get_customer_history_detail($db, $create_datetime){
+  $sql = '
+    SELECT
+        customer_history.create_datetime,
+        history.beer_id,
+        history.amount,
+        items.name,
+        items.price
+    FROM
+        (customer_history
+    INNER JOIN
+        history
+    ON
+        customer_history.create_datetime = history.create_datetime)
+    INNER JOIN
+        items
+    ON
+        history.beer_id = items.beer_id
+    where
+        history.create_datetime = ?
+  ';
+    
+  return fetch_all_query($db, $sql, array($create_datetime));
+}
 
 ?>

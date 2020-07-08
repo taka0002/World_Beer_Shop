@@ -98,11 +98,11 @@
             </form>
             </div>
             <div>
-                <h2>商品情報変更</h2>
-                <p>商品一覧</p>
                 <div class="container">
+                    <h2>商品情報変更</h2>
+                    <p>商品一覧</p>
                     <div class="table-responsive">
-                        <table class="table table-bordered">
+                        <table class="table table-bordered table-hover">
                             <tr>
                                 <th class=img>商品画像</th>
                                 <th>商品名</th>

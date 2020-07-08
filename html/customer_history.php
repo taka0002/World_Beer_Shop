@@ -3,6 +3,7 @@ require_once '../conf/const.php';
 require_once MODEL_PATH . 'db.php';
 require_once MODEL_PATH . 'user.php';
 require_once MODEL_PATH . 'functions.php';
+require_once MODEL_PATH . 'cart.php';
 
 $db = get_db_connect();
 
