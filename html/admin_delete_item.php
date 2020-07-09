@@ -7,6 +7,25 @@ require_once MODEL_PATH . 'functions.php';
 // セッション開始
 session_start();
 
+$user_id = $_SESSION['user_id'];
+
+if($user_id !== 48) {
+  
+  // ログイン済みユーザのホームページへリダイレクト
+  header('Location: login.php');
+  exit;
+  
+}
+
+$token = get_post('csrf_token');
+
+if(is_valid_csrf_token($token) === false) {
+    
+    header('Location: login.php');
+}
+
+set_session('csrf_token', '');
+
 $db = get_db_connect();
 
 $beer_id = get_post('beer_id');

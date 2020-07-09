@@ -10,6 +10,7 @@
         <h1>購入明細ページ</h1>
         <p><a href="../html/admin.php">商品管理ページはこちら</a></p>
         <p><a href="../html/user.php">ユーザー管理ページはこちら</a></p>
+        <p><a href="./index.php">トップページへ戻る</a></p>
         <div class="container">
             <h2>ユーザー情報</h2>
             <div class="table-responsive">

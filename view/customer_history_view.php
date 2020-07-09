@@ -10,6 +10,7 @@
         <h1>購入者情報ページ</h1>
         <p><a href="../html/admin.php">商品管理ページはこちら</a></p>
         <p><a href="../html/user.php">ユーザー管理ページはこちら</a></p>
+        <p><a href="./index.php">トップページへ戻る</a></p>
         <div class="container">
             <h2>ユーザー情報</h2>
             <div class="table-responsive">
@@ -41,6 +42,7 @@
                             <input type="hidden" name="email" value="<?php print($value['email']); ?>">
                             <input type="hidden" name="pay" value="<?php print($value['pay']); ?>">
                             <input type="hidden" name="create_datetime" value="<?php print($value['create_datetime']); ?>">
+                            <input type="hidden" name="csrf_token" value="<?php print $token; ?>">
                         </form>
                         <?php } ?>
                     </tbody>
