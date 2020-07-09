@@ -16,11 +16,13 @@
             </div>
             <p><a href="./user.php">ユーザー管理ページはこちら</a></p>
             <p><a href="./customer_history.php">購入者情報ページはこちら</a></p>
+            <p><a href="./index.php">トップページへ戻る</a></p>
             <h2>新規商品追加</h2>
             <form method='post' enctype="multipart/form-data" action="../html/admin_insert_item.php">
                 <div><label>名前: <input type="text" name="newname" value=''></label></div>
                 <div><label>値段: <input type="text" name="newprice" value=''></label></div>
                 <div><label>個数: <input type="text" name="stock" value=''></label></div>
+                <input type="hidden" name="csrf_token" value="<?php print $token; ?>">
                 <div><input type="file" name="new_img" value=''></div>
                 <div>
                     <select name="status">
@@ -172,6 +174,7 @@
                             <td>
                             <label><input type='number' name="update_stock" value="<?php print $value['stock']; ?>" size=10>個</label>
                             <input type="hidden" name="beer_id" value="<?php print $value['beer_id']; ?>">
+                            <input type="hidden" name="csrf_token" value="<?php print $token; ?>">
                             <input type="submit" value="変更">
                             </td>
                             </form>
@@ -190,6 +193,7 @@
                                 <?php } ?>
                                 <input type="hidden" name="beer_id" value="<?php print $value['beer_id']; ?>">
                                 <input type="hidden" name="status" value="<?php print $value['status']; ?>">
+                                <input type="hidden" name="csrf_token" value="<?php print $token; ?>">
                             </td>
                             </form>
                             
@@ -198,6 +202,7 @@
                             <td>
                                 <input type="hidden" name="beer_id" value="<?php print $value['beer_id']; ?>">
                                 <input type="submit" value="削除">
+                                <input type="hidden" name="csrf_token" value="<?php print $token; ?>">
                             </td>
                             </form>
                             
@@ -215,6 +220,7 @@
                                 <?php } ?>
                                 <input type="hidden" name="featured" value="<?php print $value['featured']; ?>">
                                 <input type="hidden" name="beer_id" value="<?php print $value['beer_id']; ?>">
+                                <input type="hidden" name="csrf_token" value="<?php print $token; ?>">
                             </td>
                             </form>
                             

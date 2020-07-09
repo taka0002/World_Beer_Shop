@@ -36,13 +36,14 @@
     </div>
     <div class="nav_bar border">
     <div class="buy_history">
-        <a href="../html/history.php">
             <?php if (isset($_SESSION['user_id'])) { ?>
-                購入履歴はこちら＞＞
+                <a href="../html/history.php">購入履歴はこちら＞＞</a>
+                <?php if($user_id === 48) { ?>
+                    <a href="../html/admin.php">管理画面はこちら＞＞</a>
+                <?php } ?>
             <?php } else { ?>
                 <a href="../html/login.php">購入時はログインが必要です＞＞</a>
             <?php } ?>
-        </a>
     </div>
         <form method="get" action=../html/search.php>
             <ul>
