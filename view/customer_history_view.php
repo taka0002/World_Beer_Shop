@@ -4,6 +4,7 @@
         <title>World Beer Shop｜購入者情報</title>
         <?php include VIEW_PATH . 'templates/head.php'; ?>
         <link rel="stylesheet" href="../html/assets/css/user.css">
+        <link rel="stylesheet" href="../html/assets/css/common.css">
         <?php include VIEW_PATH . 'templates/header_bootstrap.php'; ?>
     </head>
     <body>
@@ -17,22 +18,22 @@
                 <table class="table table-striped table-bordered table-hover">
                     <thead>
                         <tr>
-                            <th>ユーザー名</th>
-                            <th>名前</th>
-                            <th>名前（フリガナ）</th>
-                            <th>購入日</th>
-                            <th>詳細</th>
+                            <th class="text-nowrap">ユーザー名</th>
+                            <th class="text-nowrap">名前</th>
+                            <th class="text-nowrap">名前（フリガナ）</th>
+                            <th class="text-nowrap">購入日</th>
+                            <th class="text-nowrap">詳細</th>
                         </tr>
                     </thead>
                     <tbody>
                         <?php foreach($customer_history as $value) { ?>
                         <form method="post" action="./customer_history_detail.php">
                             <tr>
-                                <td><?php print $value['username'];?></td>
-                                <td><?php print h($value['name1']) . h($value['name2']);?></td>
-                                <td><?php print h($value['kana1']) . h($value['kana2']);?></td>
-                                <td><?php print $value['create_datetime'];?></td>
-                                <td><input class="btn btn-block btn-primary" type="submit" value="詳細はこちら"></td>
+                                <td class="text-nowrap"><?php print $value['username'];?></td>
+                                <td class="text-nowrap"><?php print h($value['name1']) . h($value['name2']);?></td>
+                                <td class="text-nowrap"><?php print h($value['kana1']) . h($value['kana2']);?></td>
+                                <td class="text-nowrap"><?php print $value['create_datetime'];?></td>
+                                <td class="text-nowrap"><input class="btn btn-block btn-primary" type="submit" value="詳細はこちら"></td>
                             </tr>
                             <input type="hidden" name="history_id" value="<?php print($value['history_id']); ?>">
                             <input type="hidden" name="zipcode" value="<?php print($value['zipcode']); ?>">

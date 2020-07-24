@@ -4,6 +4,7 @@
         <title>World Beer Shop｜購入明細</title>
         <?php include VIEW_PATH . 'templates/head.php'; ?>
         <link rel="stylesheet" href="../html/assets/css/user.css">
+        <link rel="stylesheet" href="../html/assets/css/common.css">
         <?php include VIEW_PATH . 'templates/header_bootstrap.php'; ?>
     </head>
     <body>
@@ -17,20 +18,20 @@
                 <table class="table table-striped table-bordered">
                     <thead>
                         <tr>
-                            <th>郵便番号</th>
-                            <th>住所</th>
-                            <th>電話番号</th>
-                            <th>メールアドレス</th>
-                            <th>支払い方法</th>
+                            <th class="text-nowrap">郵便番号</th>
+                            <th class="text-nowrap">住所</th>
+                            <th class="text-nowrap">電話番号</th>
+                            <th class="text-nowrap">メールアドレス</th>
+                            <th class="text-nowrap">支払い方法</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td><?php print $zipcode;?></td>
-                            <td><?php print h($addr1) . h($addr2);?></td>
-                            <td><?php print $tel;?></td>
-                            <td><?php print $email;?></td>
-                            <td>
+                            <td class="text-nowrap"><?php print $zipcode;?></td>
+                            <td class="text-nowrap"><?php print h($addr1) . h($addr2);?></td>
+                            <td class="text-nowrap"><?php print $tel;?></td>
+                            <td class="text-nowrap"><?php print $email;?></td>
+                            <td class="text-nowrap">
                             <?php if($pay === "1") {
                                 print "代金引換";
                             } else if($pay === "2") {
@@ -51,19 +52,19 @@
                 <table class="table table-striped table-bordered">
                     <thead>
                         <tr>
-                            <th>商品名</th>
-                            <th>金額</th>
-                            <th>購入数</th>
-                            <th>小計</th>
+                            <th class="text-nowrap">商品名</th>
+                            <th class="text-nowrap">金額</th>
+                            <th class="text-nowrap">購入数</th>
+                            <th class="text-nowrap">小計</th>
                         </tr>
                     </thead>
                     <tbody>
                         <?php foreach($get_customer_history_detail as $value) { ?>
                             <tr>
-                                <td><?php print h($value['name']);?></td>
-                                <td><?php print $value['price'];?></td>
+                                <td class="text-nowrap"><?php print h($value['name']);?></td>
+                                <td class="text-nowrap"><?php print $value['price'];?></td>
                                 <td><?php print $value['amount'];?></td>
-                                <td><?php print $value['price'] * $value['amount'];?></td>
+                                <td class="text-nowrap"><?php print $value['price'] * $value['amount'];?></td>
                             </tr>
                         <?php } ?>
                     </tbody>
