@@ -106,25 +106,25 @@
                     <div class="table-responsive">
                         <table class="table table-bordered table-hover">
                             <tr>
-                                <th class=img>商品画像</th>
-                                <th>商品名</th>
-                                <th>価格</th>
-                                <th>おつまみ</th>
-                                <th>地域</th>
-                                <th>在庫数</th>
-                                <th>ステータス</th>
-                                <th>操作</th>
-                                <th>注目アイテム</th>
+                                <th class="img text-nowrap">商品画像</th>
+                                <th class="text-nowrap">商品名</th>
+                                <th class="text-nowrap">価格</th>
+                                <th class="text-nowrap">おつまみ</th>
+                                <th class="text-nowrap">地域</th>
+                                <th class="text-nowrap">在庫数</th>
+                                <th class="text-nowrap">ステータス</th>
+                                <th class="text-nowrap">操作</th>
+                                <th class="text-nowrap">注目アイテム</th>
                             </tr>
                             <?php foreach($items as $value) { ?>
                             <!--条件式 ? 式1 : 式2-->
                             <tr class="<?php print $value['status']  === 0 ? "false" : "" ?>">
-                            <td class=img><img src="<?php print $img_dir . $value['img']; ?>"></td>
-                            <td><?php print h($value['name']); ?></td>
-                            <td><?php print $value['price'] . "円"; ?></td>
+                            <td class="img"><img src="<?php print $img_dir . $value['img']; ?>"></td>
+                            <td class="text-nowrap"><?php print h($value['name']); ?></td>
+                            <td class="text-nowrap"><?php print $value['price'] . "円"; ?></td>
                             
                             <!--おつまみに関する記述 -->
-                            <td>
+                            <td class="text-nowrap">
                                 <?php if((int)$value['appetizers'] === 0) { ?>
                                 
                                     ナッツ
@@ -149,7 +149,7 @@
                             </td>
                             
                             <!--地域に関する記述 -->
-                            <td>
+                            <td class="text-nowrap">
                                 <?php if((int)$value['area'] === 0) { ?>
                                 
                                     ヨーロッパ
@@ -171,7 +171,7 @@
                             
                             <!--在庫数の変更についての記述 -->
                             <form method='post' action="../html/admin_change_stock.php">
-                            <td>
+                            <td class="text-nowrap">
                             <label><input type='number' name="update_stock" value="<?php print $value['stock']; ?>" size=10>個</label>
                             <input type="hidden" name="beer_id" value="<?php print $value['beer_id']; ?>">
                             <input type="hidden" name="csrf_token" value="<?php print $token; ?>">
@@ -181,7 +181,7 @@
                             
                             <!--ステータスの変更についての記述 -->
                             <form method="post" action="../html/admin_change_status.php">
-                            <td>
+                            <td class="text-nowrap">
                                 <?php if((int)$value['status'] === 0) { ?>
                                    
                                    <input type="submit" name = "change_status" value="非公開→公開">
