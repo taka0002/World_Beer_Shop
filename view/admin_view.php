@@ -89,7 +89,7 @@
                         <option value="3">日本</option>
                     </select>
                 </div>
-                <div>商品の詳細: <input type="text" name="comment" value='' size=200></div>
+                <div>商品の詳細: <input type="text" name="comment" value='' size=30></div>
                 <div>
                     <select name="featured">
                         <option value="0">注目アイテムに入れない</option>
