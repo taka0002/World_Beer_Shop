@@ -105,7 +105,7 @@
                     <p>商品一覧</p>
                     <div class="table-responsive">
                         <table class="table table-bordered table-hover">
-                            <tr>
+                            <tr class="thead-light">
                                 <th class="img text-nowrap">商品画像</th>
                                 <th class="text-nowrap">商品名</th>
                                 <th class="text-nowrap">価格</th>
