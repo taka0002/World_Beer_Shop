@@ -29,7 +29,7 @@
             </div>
             <div class="pagi_nation">
                 <?php if($items_count !== 0) { ?>
-                <form method="get" action="buy_history.php">
+                <form method="get" action="history.php">
                   <p>
                     <?php print $items_count. '件中'.$page_ini. "〜" .$page_fin. "件目の商品"; ?>
                   </p>
