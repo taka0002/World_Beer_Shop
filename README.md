@@ -1,6 +1,8 @@
 # World_beershop
 世界各国のビールを購入できる、オリジナルECサイトです。
 
+![スクリーンショット 2020-07-29 22 13 00](https://user-images.githubusercontent.com/63849657/88804333-bce58e00-d1e8-11ea-94e8-3b96c237810e.png)
+
 （テスト用ユーザー名：test01）
 
 （テスト用パスワード：password）
