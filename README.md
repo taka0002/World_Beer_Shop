@@ -38,6 +38,8 @@ HTML/CSS、JavaScript、jQuery、PHP、MySQL、GitHub、Docker
 
 ・管理ページの購入者情報からユーザーが買ったもの、また購入時に入力した情報（住所やメールアドレスなど）もわかるようになっている。
 
+![タイトルなし](https://user-images.githubusercontent.com/63849657/89091067-9e96b280-d3e1-11ea-972f-c059bc215cdd.gif)
+
 ・購入履歴画面で、購入情報を閲覧できる。
 
 ・購入履歴画面ではページネーションを活用し、履歴が見やすくなっている。
