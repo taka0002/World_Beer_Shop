@@ -44,6 +44,8 @@ HTML/CSS、JavaScript、jQuery、PHP、MySQL、GitHub、Docker
 
 ・購入履歴画面ではページネーションを活用し、履歴が見やすくなっている。
 
+![タイトルなし](https://user-images.githubusercontent.com/63849657/89091135-22e93580-d3e2-11ea-846e-708c8971a415.gif)
+
 ・スマホで閲覧したときに表示が崩れない。
 
 URL：http://118.27.17.152/beershop_mvc/html/index.php
