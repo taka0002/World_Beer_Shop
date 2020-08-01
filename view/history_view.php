@@ -29,7 +29,7 @@
             </div>
             <div class="pagi_nation">
                 <?php if($items_count !== 0) { ?>
-                <form method="get" action="buy_history.php">
+                <form method="get" action="history.php">
                   <p>
                     <?php print $items_count. '件中'.$page_ini. "〜" .$page_fin. "件目の商品"; ?>
                   </p>
@@ -45,7 +45,7 @@
                     for($i = 1; $i <= $max_page; $i++){
                         if($i >= $now - $range && $i <= $now + $range) {
                             if ($i == $now) {
-                                print '<a class="current_page" href=\'history.php?page_id='.$now.'\')>'. $now. '</a>'. '　';
+                                print '<span class="current_page">' . $now . '</span>' . '　';
                             } else {
                                 print '<a href=\'../html/history.php?page_id='.$i. '\')>'. $i. '</a>'. '　';
                             }
