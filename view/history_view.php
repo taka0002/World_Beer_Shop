@@ -45,7 +45,7 @@
                     for($i = 1; $i <= $max_page; $i++){
                         if($i >= $now - $range && $i <= $now + $range) {
                             if ($i == $now) {
-                                print '<a class="current_page" href=\'history.php?page_id='.$now.'\')>'. $now. '</a>'. '　';
+                                print '<span class="current_page">' . $now . '</span>' . '　';
                             } else {
                                 print '<a href=\'../html/history.php?page_id='.$i. '\')>'. $i. '</a>'. '　';
                             }
