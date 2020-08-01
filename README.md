@@ -14,6 +14,8 @@ HTML/CSS、JavaScript、jQuery、PHP、MySQL、GitHub、Docker
 
 ・トップページにて、注目アイテムをスクロールで表示している。
 
+![タイトルなし](https://user-images.githubusercontent.com/63849657/89090506-45794f80-d3de-11ea-8e19-2af52a9f6dce.gif)
+
 ・検索条件にてビールにあうおつまみを検索項目に入れることで、食べたいモノからそれにあうビールが選べるようになっている。
 
 ・各地域において、価格の安い・高い順に商品の並び替えができる。
