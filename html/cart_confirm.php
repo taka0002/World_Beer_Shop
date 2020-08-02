@@ -29,24 +29,6 @@ set_session('csrf_token', '');
 
 $user_id = $_SESSION['user_id'];
 
-$name1 = get_cookie('name1');
-
-$name2 = get_cookie('name1');
-
-$kana1 = get_cookie('kana1');
-
-$kana2 = get_cookie('kana2');
-
-$zipcode = get_cookie('zipcode');
-
-$addr1 = get_cookie('addr1');
-
-$addr2 = get_cookie('addr2');
-
-$tel = get_cookie('tel');
-
-$email = get_cookie('email');
-
 $beer_id = get_post('beer_id');
 
 $amount = get_post('amount');
@@ -88,6 +70,18 @@ $email = get_post('email');
 $email = preg_replace('/^[ 　]+/u', '', $email);
 
 $pay = get_post('pay');
+
+$now = time();
+
+setcookie('name1' , $name1, $now + 60 * 60 * 24 * 365);
+setcookie('name2' , $name2, $now + 60 * 60 * 24 * 365);
+setcookie('kana1' , $kana1, $now + 60 * 60 * 24 * 365);
+setcookie('kana2' , $kana2, $now + 60 * 60 * 24 * 365);
+setcookie('zipcode' , $zipcode, $now + 60 * 60 * 24 * 365);
+setcookie('addr1' , $addr1, $now + 60 * 60 * 24 * 365);
+setcookie('addr2' , $addr2, $now + 60 * 60 * 24 * 365);
+setcookie('tel' , $tel, $now + 60 * 60 * 24 * 365);
+setcookie('email' , $email, $now + 60 * 60 * 24 * 365);
 
 if($name1 === '') {
     $err_msg[] = '名前（姓）を入力してください。';

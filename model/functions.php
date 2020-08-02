@@ -38,7 +38,7 @@ function get_session($name){
 }
 
 function set_session($name, $value){
-  //セッション変数に$nameを保存
+  //セッション変数に$valueを保存
   $_SESSION[$name] = $value;
 }
 
