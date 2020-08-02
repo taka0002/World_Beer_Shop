@@ -38,35 +38,23 @@ $carts = get_user_carts($db, $user_id);
 
 $total_price = sum_carts($carts);
 
-$now = time();
+$name1 = get_cookie('name1');
 
-$name1 = get_post('name1');
+$name2 = get_cookie('name1');
 
-$name2 = get_post('name2');
+$kana1 = get_cookie('kana1');
 
-$kana1 = get_post('kana1');
+$kana2 = get_cookie('kana2');
 
-$kana2 = get_post('kana2');
+$zipcode = get_cookie('zipcode');
 
-$zipcode = get_post('zipcode');
+$addr1 = get_cookie('addr1');
 
-$addr1 = get_post('addr1');
+$addr2 = get_cookie('addr2');
 
-$addr2 = get_post('addr2');
+$tel = get_cookie('tel');
 
-$tel = get_post('tel');
-
-$email = get_post('email');
-
-setcookie('name1' , $name1, $now + 60 * 60 * 24 * 365);
-setcookie('name2' , $name2, $now + 60 * 60 * 24 * 365);
-setcookie('kana1' , $kana1, $now + 60 * 60 * 24 * 365);
-setcookie('kana2' , $kana2, $now + 60 * 60 * 24 * 365);
-setcookie('zipcode' , $zipcode, $now + 60 * 60 * 24 * 365);
-setcookie('addr1' , $addr1, $now + 60 * 60 * 24 * 365);
-setcookie('addr2' , $addr2, $now + 60 * 60 * 24 * 365);
-setcookie('tel' , $tel, $now + 60 * 60 * 24 * 365);
-setcookie('email' , $email, $now + 60 * 60 * 24 * 365);
+$email = get_cookie('email');
 
 $beer_id = get_post('beer_id');
 

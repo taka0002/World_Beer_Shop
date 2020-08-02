@@ -119,15 +119,6 @@
                                     <input type="hidden" name="beer_id" value="<?php print $value['beer_id']; ?>">
                                     <input type="hidden" name="amount" value="<?php print $value['amount']; ?>">
                                 <?php } ?>
-                                <input type="hidden" name="name1" value="<?php print $name1; ?>">
-                                <input type="hidden" name="name2" value="<?php print $name2; ?>">
-                                <input type="hidden" name="kana1" value="<?php print $kana1; ?>">
-                                <input type="hidden" name="kana2" value="<?php print $kana2; ?>">
-                                <input type="hidden" name="zipcode" value="<?php print $zipcode; ?>">
-                                <input type="hidden" name="addr1" value="<?php print $addr1; ?>">
-                                <input type="hidden" name="addr2" value="<?php print $addr2; ?>">
-                                <input type="hidden" name="tel" value="<?php print $tel; ?>">
-                                <input type="hidden" name="email" value="<?php print $email; ?>">
                                 <input type="hidden" name="csrf_token" value="<?php print $token; ?>">
                             </div>
                         </form>
@@ -147,15 +138,6 @@
                                     <input type="hidden" name="beer_id" value="<?php print $value['beer_id']; ?>">
                                     <input type="hidden" name="amount" value="<?php print $value['amount']; ?>">
                                 <?php } ?>
-                                <input type="hidden" name="name1" value="<?php print $name1; ?>">
-                                <input type="hidden" name="name2" value="<?php print $name2; ?>">
-                                <input type="hidden" name="kana1" value="<?php print $kana1; ?>">
-                                <input type="hidden" name="kana2" value="<?php print $kana2; ?>">
-                                <input type="hidden" name="zipcode" value="<?php print $zipcode; ?>">
-                                <input type="hidden" name="addr1" value="<?php print $addr1; ?>">
-                                <input type="hidden" name="addr2" value="<?php print $addr2; ?>">
-                                <input type="hidden" name="tel" value="<?php print $tel; ?>">
-                                <input type="hidden" name="email" value="<?php print $email; ?>">
                                 <input type="hidden" name="csrf_token" value="<?php print $token; ?>">
                             </div>
                         </form>
