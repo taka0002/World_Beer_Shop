@@ -40,7 +40,7 @@ $total_price = sum_carts($carts);
 
 $name1 = get_cookie('name1');
 
-$name2 = get_cookie('name1');
+$name2 = get_cookie('name2');
 
 $kana1 = get_cookie('kana1');
 
