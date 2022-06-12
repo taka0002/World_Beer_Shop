@@ -52,5 +52,3 @@ https://qiita.com/taka0002/items/a3d168d939c1aa5279c9
 ・スマホで閲覧したときに表示が崩れない。
 
 ![タイトルなし](https://user-images.githubusercontent.com/63849657/89091207-b7539800-d3e2-11ea-8a06-639b28d74349.gif)
-
-URL：http://118.27.17.152/beershop_mvc/html/index.php
